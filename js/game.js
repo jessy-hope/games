@@ -42,8 +42,10 @@ const checkCards = () => {
   const firstCharacter = firstCard.getAttribute('data-character');
   const secondCharacter = secondCard.getAttribute('data-character');
   const startNow = document.getElementById('counter').innerText;
+console.log(typeof(startNow));
+console.log("xxxx",startNow);
 
- if(startNow === "00:00:00") {
+if(startNow === "00:00:00") {
   alert("Clique em start para jogar");
 
 }
@@ -58,7 +60,8 @@ const checkCards = () => {
 
     checkEndGame();
 
-  } else {
+  } 
+  else {
     setTimeout(() => {
 
       firstCard.classList.remove('reveal-card');
@@ -69,7 +72,7 @@ const checkCards = () => {
 
     }, 500);
   }
-  
+
 }
 
 const revealCard = ({ target }) => {

@@ -42,15 +42,14 @@ const checkCards = () => {
   const firstCharacter = firstCard.getAttribute('data-character');
   const secondCharacter = secondCard.getAttribute('data-character');
   const startNow = document.getElementById('counter').innerText;
-console.log(typeof(startNow));
-console.log("xxxx",startNow);
+
 
 if(startNow === "00:00:00") {
   alert("Clique em start para jogar");
 
 }
 
-  if (firstCharacter === secondCharacter) {
+  if (firstCharacter === secondCharacter && startNow != "00:00:00") {
 
     firstCard.firstChild.classList.add('disabled-card');
     secondCard.firstChild.classList.add('disabled-card');

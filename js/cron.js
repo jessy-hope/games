@@ -1,6 +1,5 @@
 "use strict"
 
-var hh = 0;
 var mm = 0;
 var ss = 0;
 var record;
@@ -21,7 +20,6 @@ function pause() {
 //Para o temporizador e limpa as variáveis
 function stop() {
     clearInterval(cron);
-    hh = 0;
     mm = 0;
     ss = 0;
 
@@ -40,12 +38,12 @@ function timerSheet() {
 
         if (mm == 60) { //Verifica se deu 59 minutos
             mm = 0;//Volta os minutos para 0
-            hh++;//Adiciona +1 na variável hora
+            
         }
     }
 
     //Cria uma variável com o valor tratado HH:MM:SS
-    var format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+    var format = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
     
     //Insere o valor tratado no elemento counter
     document.getElementById('counter').innerText = format;

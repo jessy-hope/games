@@ -44,12 +44,12 @@ const checkCards = () => {
   const startNow = document.getElementById('counter').innerText;
 
 
-if(startNow === "00:00:00") {
+if(startNow === "00:00") {
   alert("Clique em start para jogar");
 
 }
 
-  if (firstCharacter === secondCharacter && startNow != "00:00:00") {
+  if (firstCharacter === secondCharacter && startNow != "00:00") {
 
     firstCard.firstChild.classList.add('disabled-card');
     secondCard.firstChild.classList.add('disabled-card');

@@ -16,8 +16,7 @@ function start() {
 //Para o temporizador mas não limpa as variáveis
 function pause() {
     clearInterval(cron);
-    console.log("zz", cron);
-}
+   }
 
 //Para o temporizador e limpa as variáveis
 function stop() {
@@ -27,6 +26,8 @@ function stop() {
     ss = 0;
 
     document.getElementById('counter').innerText = '00:00:00';
+    window.location.reload();
+
 }
 
 //Faz a contagem do tempo e exibição
@@ -51,6 +52,5 @@ function timerSheet() {
     record = localStorage.setItem('counter', format);
 
     //Retorna o valor tratado
-    console.log("time", record);
     return format;
 }

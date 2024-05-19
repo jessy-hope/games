@@ -45,7 +45,7 @@ const checkCards = () => {
 
   if(startNow === "00:00:00") {
     alert("Clique em start para jogar");
-
+  }
   
     if (firstCharacter === secondCharacter) {
   
@@ -68,7 +68,7 @@ const checkCards = () => {
   
       }, 500);
     }
-  }
+  
 }
 
 const revealCard = ({ target }) => {

@@ -23,7 +23,7 @@ function stop() {
     mm = 0;
     ss = 0;
 
-    document.getElementById('counter').innerText = '00:00:00';
+    document.getElementById('counter').innerText = '00:00';
     window.location.reload();
 
 }

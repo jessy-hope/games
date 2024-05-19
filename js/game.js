@@ -41,29 +41,34 @@ const checkEndGame = () => {
 const checkCards = () => {
   const firstCharacter = firstCard.getAttribute('data-character');
   const secondCharacter = secondCard.getAttribute('data-character');
+  const startNow = document.getElementById('counter').innerText;
 
-  if (firstCharacter === secondCharacter) {
+  if(startNow === "00:00:00") {
+    alert("Clique em start para jogar");
 
-    firstCard.firstChild.classList.add('disabled-card');
-    secondCard.firstChild.classList.add('disabled-card');
-
-    firstCard = '';
-    secondCard = '';
-
-    checkEndGame();
-
-  } else {
-    setTimeout(() => {
-
-      firstCard.classList.remove('reveal-card');
-      secondCard.classList.remove('reveal-card');
-
+  
+    if (firstCharacter === secondCharacter) {
+  
+      firstCard.firstChild.classList.add('disabled-card');
+      secondCard.firstChild.classList.add('disabled-card');
+  
       firstCard = '';
       secondCard = '';
-
-    }, 500);
+  
+      checkEndGame();
+  
+    } else {
+      setTimeout(() => {
+  
+        firstCard.classList.remove('reveal-card');
+        secondCard.classList.remove('reveal-card');
+  
+        firstCard = '';
+        secondCard = '';
+  
+      }, 500);
+    }
   }
-
 }
 
 const revealCard = ({ target }) => {

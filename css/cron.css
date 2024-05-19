@@ -22,7 +22,7 @@ h1 {
     display: block;
     direction: rtl;
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 20px;
+    font-size: 52px;
 }
 
 button {

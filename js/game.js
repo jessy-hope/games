@@ -1,8 +1,5 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
-//const timer = document.querySelector('.timer');
-//const timer = document.getElementById('counter').innerText = '00:00:00';
-
 
 const characters = [
   'baby',
@@ -18,7 +15,7 @@ const characters = [
   'sonic',
   'tio-patinhas',
   'tom',
-  'bg',
+  'pantera',
 ];
 
 const createElement = (tag, className) => {
@@ -34,14 +31,11 @@ const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
 
   if (disabledCards.length === 28) {
-    //clearInterval(this.loop);
-   
+    
     const timer = localStorage.getItem('counter');
-    console.log("tempo", timer);
     alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer}`);
-    stop();
-    window.location.reload();
-  }
+    pause();
+      }
 }
 
 const checkCards = () => {
@@ -121,30 +115,8 @@ const loadGame = () => {
   });
 }
 
-/*const startTimer = () => {
-
-  this.loop = setInterval(() => {
-    const currentTime = +timer.innerHTML;
-    
-    timer.innerHTML = currentTime +1;
-   
-
-  }, 1000);
-
-}*/
-
-
-
-
-
-
-
-
 window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem('player');
-  //startTimer();
   loadGame();
-  
-
-  
+   
 }

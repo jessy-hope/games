@@ -2,10 +2,11 @@
 
 ## <img width="28px" src="https://github.com/jessy-hope/games/assets/92484650/9e8e2eed-0098-4dfe-a094-963e14087ee5" alt="foco Icon" /> Objetivo
 ### Melhorias funcionais a partir de um jogo de memória, tais como:
- * Mensagem de alerta antes de iniciar o jogo
+
  * Botão de "Start" e Botão de "Reset",
  * Cronômetro de tempo dispara a partir do botão "Start",
  * O Botão de "Reset" reinicia o jogo/tempo,
+ * Mensagem de alerta antes de iniciar o jogo,
  * Captura de término do jogo, 
  * Mensagem após terminar o jogo informando o nome do jogador e o tempo realizado de modo dinâmico.
 
